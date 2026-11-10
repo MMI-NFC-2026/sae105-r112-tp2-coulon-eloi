@@ -5,4 +5,43 @@
   width: 100%;
   height: 100%;
   border: 0;
+  transition: 400ms allow-discrete; /* permet une transition de 400 ms sur l'opacité*/
+  opacity: 0;
+}
+
+.menu:popover-open {
+  opacity: 1;
+}
+
+@starting-style {          /* permet de faire une animation partant de l'opacité 0 à l'opacité 1*/
+  .menu:popover-open {
+    opacity: 0;
+  }
+}
+
+
+html:has(.menu:popover-open) {
+  overflow: hidden;
+}
+
+.burger {
+  cursor: pointer;        /* change le curseur quand on passe sur le bouton burger */
+}
+
+@starting-style {
+  .menu:popover-open .burger--close {
+    transform: none;
+  }
+}
+
+.menu:popover-open .burger--close {    /* permet de faire une animation de rotation du bouton burger quand on ouvre le menu */
+  transform: rotate(90deg);
+  transition: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menu .burger--close {
+    transition: none;
+  }
 }

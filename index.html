@@ -12,21 +12,21 @@
   <header class="header header--home">
 
     <!-- Menu principal -->
-    <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
+    <button class="burger" type="button" popovertarget="menu" aria-label="Menu"> <!-- créer un bouton pour ouvrir le menu -->
   🍔
 </button>
 
-    <nav class="menu" id="menu" popover aria-label="Main menu">
-      <button
+    <nav class="menu" id="menu" popover aria-label="Main menu">  <!-- permet de créer un menu popover navigable -->
+      <button               
   class="menu__close burger burger--close"
   type="button"
   popovertarget="menu"
   popovertargetaction="hide"
   aria-label="Close the menu"
-  autofocus
+  autofocus 
 >
   🍔
-</button>
+</button> <!-- créer un bouton pour fermer le menu en appuyant soit sur le bouton ducoup ou en appuyant sur entrée sans toucher la souris -->
       <ul class="menu__list">
         <li class="menu__item"><a class="menu__link" href="#">Item de menu un</a></li>
         <li class="menu__item"><a class="menu__link" href="#">Item de menu deux</a></li>
